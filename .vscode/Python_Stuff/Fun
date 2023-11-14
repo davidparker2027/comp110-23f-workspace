@@ -1,0 +1,34 @@
+"""Fun Code"""
+import webbrowser
+password = ("gaysex")
+word = input("Welcome! What are you here for? ")
+if word == password:
+    webbrowser.open_new("https://www.youtube.com/watch?v=vYszjayr5a4")
+
+print("Okay, if you wanna see the secret you need to solve my imposibble riddles! ")
+print("Answer in all lowercase letters with only 1 word answers")
+print("Question #1")
+question = input("What dries as it gets wet? ")
+while len(question) > 0:
+    if question == str("towel"):
+        print("Correct! ")
+        print("Question #2")
+        question1 = input("What goes up but never comes down? ")
+        if question1 == str("age"):
+            print("Correct! ")
+            print("Final Question")
+            question2 = input("What room has no walls, windows, or doors? ")
+            if question2 == str("mushroom"):
+                webbrowser.open_new("https://www.pornhub.com/view_video.php?viewkey=646e2700a446b")
+            else:
+                print("incorrect! Try agian! ")
+                webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                exit()
+        else:
+            print("incorrect! Try again! ")
+            webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            exit()
+    else:
+        print("incorrect! Try again! ")
+        webbrowser.open_new("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        exit()

@@ -1,0 +1,20 @@
+"""How Gay Are You?"""
+import random
+import webbrowser
+num = random.randint(0, 10)
+# The game starts
+name = input("What is your name: ")
+girl = input("Who is the girl in question? ")
+celebrate = "U+1F973"
+
+print("Hello " + name + ". There is a " + str(num) + "/10 chance that: " + girl + " likes you! ")\
+
+if num >= 5:
+    locked: bool = True
+    num2 = random.randint(0, 100)
+    celebrate = "\1F973"
+    print("There is a " + str(num2) + " percent chance you will SMASH! ")
+    if num2 > 50:
+        webbrowser.open_new("https://www.youtube.com/watch?v=JtQnIq5FxcA")
+    else: 
+        webbrowser.open_new("https://www.youtube.com/watch?v=oytOOA9sOiE")

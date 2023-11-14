@@ -1,0 +1,23 @@
+"""Quiz #2 Practice!"""
+
+from lessons.zip import zip
+
+
+def test_empty_list() -> None:
+    assert zip([], []) == {}
+
+
+def test_contains_elem() -> None:
+    """Testing to see if an element is contained."""
+    test: dict[str, int] = {"yes": 1}
+    x: list[str] = ["yes"]
+    y: list[int] = [1]
+    assert zip(x, y) == test
+
+
+def test_contaons_two_elem() -> None:
+    """Testing to see if two elements are contained."""
+    test2: dict[str, int] = {"Yes": 1, "No": 2}
+    first: list[str] = ["Yes", "No"]
+    second: list[int] = [1, 2]
+    assert zip(first, second) == test2

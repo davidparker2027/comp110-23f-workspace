@@ -1,0 +1,35 @@
+"""Quiz 2 Practice."""
+
+
+def odd_and_even(x: list[int]) -> list[int]:
+    """Determines if a number is odd or even."""
+    i: int = 0
+    new_list: list[int] = []
+    while i < len(x):
+        if x[i] % 2 == 1 and i % 2 == 0:
+            new_list.append(x[i])
+        i += 1
+    return new_list
+
+
+#  print(odd_and_even([7, 8, 10, 10, 5, 12, 3, 2, 11, 8]))
+
+
+def value_exists(listy: dict[str, int], x: int) -> bool:
+    """Does a number exist in a dictionary."""
+    exists: bool = True
+    for num in listy:
+        if listy[num] == x:
+            return exists
+    return not exists
+
+
+#  test_dict: dict[str, int] = {"a": 2, "b": 4, "c": 7, "d": 1}
+#  test_val: int = 4
+#  print(value_exists(test_dict, test_val))
+
+dictionary: dict[str, int] = {"one": 1, "two": 2, "three": 3}
+i: int = 0
+while i < len(dictionary):
+    dictionary[4] = "four"
+    i += 1

@@ -1,0 +1,68 @@
+"""Forest Game"""
+import time
+
+
+def introduction():
+    print("Welcome to the Text Adventure Game!")
+    time.sleep(1)
+    print("You find yourself in a mysterious forest.")
+    time.sleep(1)
+    print("Your goal is to navigate through the forest and reach the treasure.")
+    time.sleep(1)
+
+
+def make_choice(options):
+    print("\nChoose your action:")
+    for i, option in enumerate(options, 1):
+        print(f"{i}. {option}")
+
+    while True:
+        try:
+            choice = int(input("Enter the number of your choice: "))
+            if 1 <= choice <= len(options):
+                return choice
+            else:
+                print("Invalid choice. Please enter a valid number.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+
+def forest_path():
+    print("\nYou come across a fork in the path.")
+    time.sleep(1)
+    choice = make_choice(["Take the left path", "Take the right path"])
+
+    if choice == 1:
+        print("You chose the left path. It leads you deeper into the forest.")
+        time.sleep(1)
+        return "left"
+    else:
+        print("You chose the right path. It leads you to a clearing.")
+        time.sleep(1)
+        return "right"
+
+
+def main():
+    introduction()
+
+    path = forest_path()
+
+    if path == "left":
+        print("You encounter a pack of wolves!")
+        time.sleep(1)
+        choice = make_choice(["Fight the wolves", "Run away"])
+
+        if choice == 1:
+            print("You bravely fight the wolves but get injured.")
+            time.sleep(1)
+            print("Despite your injuries, you continue your journey.")
+        else:
+            print("You wisely choose to run away from the wolves.")
+
+    else:
+        print("You find a treasure chest in the clearing.")
+        time.sleep(1)
+        print("Congratulations! You've found the treasure and won the game.")
+
+if __name__ == "__main__":
+    main()
